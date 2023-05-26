@@ -35,53 +35,17 @@
                         <th>Action</th>
                     </tr>
                 </tfoot>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Drama</td>
-                        <td>Film Tentang kehidupan</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Action</td>
-                        <td>Film Laga</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Crime</td>
-                        <td>Film Tentang Pembunuhan</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Horor</td>
-                        <td>Film yang menyeramkan</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Anime</td>
-                        <td>Film Tentang animasi jepang</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
-                        </td>
-                    </tr>
-                    <!-- Add more rows for other genres -->
+                @foreach ($genres as $genre)
+                <tr>
+                    <td>{{ $genre['no'] }}</td>
+                    <td>{{ $genre['nama genre'] }}</td>
+                    <td>{{ $genre['deskripsi'] }}</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
+                    </td>
+                </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

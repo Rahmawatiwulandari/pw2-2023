@@ -40,61 +40,19 @@
                     </tr>
                 </tfoot>
                 <tbody>
+                    @foreach ($review as $reviews)
                     <tr>
-                        <td>1</td>
-                        <td>Parasite</td>
-                        <td>Amii</td>
-                        <td>8.5</td>
-                        <td>Merinding nontonnya.</td>
+                        <td>{{ $reviews['no'] }}</td>
+                        <td>{{ $reviews['movie'] }}</td>
+                        <td>{{ $reviews['user'] }}</td>
+                        <td>{{ $reviews['rating'] }}</td>
+                        <td>{{ $reviews['comment'] }}</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
+                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>The Godfather</td>
-                        <td>Budi</td>
-                        <td>9.0</td>
-                        <td>Sungguh masterpiece film ini.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Avengers: Endgame</td>
-                        <td>qusye</td>
-                        <td>6.0</td>
-                        <td>Ceritanya kurang masuk dengan Avengers sebelumnya.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Puss In Boots</td>
-                        <td>Apik</td>
-                        <td>8.0</td>
-                        <td>Sangat menyenangkan filmnya.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Iblis Dalam Darah</td>
-                        <td>Azka</td>
-                        <td>6.0</td>
-                        <td>Kurang memuaskan filmnya. Tapi horornya dapet sih.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

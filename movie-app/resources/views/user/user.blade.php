@@ -44,10 +44,10 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Ahmad</td>
-                        <td>Ah234</td>
-                        <td>supreme</td>
-                        <td>Ahmad@gmail.com</td>
+                        <td>Wulan</td>
+                        <td>wulandari</td>
+                        <td>s060607</td>
+                        <td>Wulandari@gmail.com</td>
                         <td>Administrator</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
@@ -56,9 +56,9 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Azka</td>
-                        <td>Az3453</td>
-                        <td>apalah32</td>
+                        <td>Rahmawati wulandari</td>
+                        <td>09876543</td>
+                        <td>rahm221300</td>
                         <td>az23452@gmail.com</td>
                         <td>User</td>
                         <td>
@@ -68,10 +68,10 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Ridha</td>
-                        <td>rido098</td>
+                        <td>andy syaikurrahim</td>
+                        <td>syaikur</td>
                         <td>09871234</td>
-                        <td>ridha45@gmail.com</td>
+                        <td>andy@gmail.com</td>
                         <td>User</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
@@ -80,10 +80,10 @@
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Liza</td>
-                        <td>Nur</td>
-                        <td>Tangse32</td>
-                        <td>anaktangse@gmail.com</td>
+                        <td>dana</td>
+                        <td>dana123</td>
+                        <td>32890iya</td>
+                        <td>anakdepok@gmail.com</td>
                         <td>User</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
@@ -92,10 +92,10 @@
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Ariani</td>
-                        <td>ani436</td>
-                        <td>pidie456</td>
-                        <td>aneukranto@gmail.com</td>
+                        <td>amar</td>
+                        <td>amar raz</td>
+                        <td>razkin234</td>
+                        <td>amarraz@gmail.com</td>
                         <td>User</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
