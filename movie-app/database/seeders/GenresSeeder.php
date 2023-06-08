@@ -19,13 +19,23 @@ class GenresSeeder extends Seeder
         ]);
 
         Genres::create([
-            'nama'=> 'Action',
-            'deskripsi'=> 'Action-packed movies',
+            'nama'=> 'Drama',
+            'deskripsi'=> 'Film tenteang keluarga',
         ]);
         
         Genres::create([
-            'nama'=> 'Action',
-            'deskripsi'=> 'Action-packed movies',
+            'nama'=> 'cinemore',
+            'deskripsi'=> 'Film tentang edukasi',
+        ]);
+        
+        Genres::create([
+            'nama'=> 'Horor',
+            'deskripsi'=> 'Susana 1000 sate',
+        ]);
+        
+        Genres::create([
+            'nama'=> 'Anime',
+            'deskripsi'=> 'Doraemon',
         ]);
     }
 }
