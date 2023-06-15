@@ -40,14 +40,14 @@
                         <th>Action</th>
                     </tr>
                 </tfoot>
-                @foreach ($genres as $genre)
+                @foreach ($genres as $genres)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $genre->nama }}</td>
-                    <td>{{ $genre->deskripsi }}</td>
+                    <td>{{ $genres->nama }}</td>
+                    <td>{{ $genres->deskripsi }}</td>
                     <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <form action="/genres/{{ $genre->id}}" method="post">
+                        <a href="/genres/{{ $genres->id }}/edit" class="btn btn-sm btn-warning"> Edit</a>
+                        <form action="/genres/{{ $genres->id}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')">Delete</button>

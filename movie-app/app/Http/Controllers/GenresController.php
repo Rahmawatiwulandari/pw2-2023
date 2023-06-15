@@ -53,16 +53,24 @@ class GenresController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Genres $genres)
-    {
-        //
-    }
+{
+    
+
+    return view('genres.edit', compact('genres',));
+}
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Genres $genres)
     {
-        //
+        $validateData = $request->validate([
+            'nama' => 'required' ,
+            'deskripsi' => 'required' ,
+        ]);
+        $genres->update($validateData);
+
+    return redirect('/genres')->with('success', 'Movie updated successfully!');
     }
 
     /**

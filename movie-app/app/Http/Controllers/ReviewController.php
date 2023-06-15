@@ -55,17 +55,30 @@ class ReviewController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Review $review)
-    {
-        //
-    }
+{
+    
+    return view('review.edit', compact('review', 'review'));
+}
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Review $review)
     {
-        //
+        $validatedData = $request->validate([
+            'movie' => 'required' ,
+            'user' => 'required' ,
+            'rating' => 'required' ,
+            'comment' => 'required',
+        ]);
+
+    $review->update($validatedData);
+
+    return redirect('/review')->with('success', 'review updated successfully!');
+
     }
+
+    
 
     /**
      * Remove the specified resource from storage.
