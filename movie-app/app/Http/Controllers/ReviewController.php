@@ -70,6 +70,7 @@ class ReviewController extends Controller
             'user' => 'required' ,
             'rating' => 'required' ,
             'comment' => 'required',
+            'tanggal' => 'required',
         ]);
 
     $review->update($validatedData);

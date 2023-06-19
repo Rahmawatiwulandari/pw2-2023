@@ -18,6 +18,7 @@ class ReviewsSeeder extends Seeder
             'user'=> 'Wulan',
             'rating'=> 8.5,
             'comment'=> 'Filmnya Bagus',
+            'tanggal' => 23-06-2006,
         ]);
 
         Review::create([
@@ -25,6 +26,7 @@ class ReviewsSeeder extends Seeder
             'user'=> 'amar',
             'rating'=> 9.8,
             'comment'=> 'menyenangkan',
+            'tanggal' => 12-012-2006,
         ]);
 
         Review::create([
@@ -32,6 +34,7 @@ class ReviewsSeeder extends Seeder
             'user'=> 'nining',
             'rating'=> 9.5,
             'comment'=> 'Filmnya bagus dan memuaskan',
+            'tanggal' => 13-7-2020,
         ]);
 
         Review::create([
@@ -39,6 +42,7 @@ class ReviewsSeeder extends Seeder
             'user'=> 'rahma',
             'rating'=> 9.5,
             'comment'=> 'Filmnya terbawa perasaan',
+            'tanggal' => 20-06-2023,
         ]);
 
         Review::create([
@@ -46,6 +50,7 @@ class ReviewsSeeder extends Seeder
             'user'=> 'karimah',
             'rating'=> 7,
             'comment'=> 'Filmnya kurang sedih',
+            'tanggal' => 21-07-1999,
         ]);
     }
 }

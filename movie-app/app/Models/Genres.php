@@ -9,7 +9,7 @@ class Genres extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama', 'deskripsi'];
+    protected $fillable = ['nama', 'deskripsi', 'tanggal'];
 
     
     public function getAllReview()

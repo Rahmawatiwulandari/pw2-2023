@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Genres;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
@@ -39,10 +40,19 @@ class MovieController extends Controller
             'negara' => 'required',
             'tahun' => 'required|integer',
             'rating' => 'required|numeric',
-        ]);
+        ]);        
+        if($request->hasFile('poster')) {
+            // set image name
+           $extension= $request->file('poster')->getClientOriginalExtension();
+            $imageName = time() .'.' .$extension;
+
+            // Store to Storage
+            $request->file('poster')->storeAs('assets/img', $imageName, 'public');
+            $validateData['poster'] = $imageName;
+        }
 
         Movie::create( $validateData);
-        return redirect('/movies')->with('succes', 'Data berhasil ditambahkan');
+        return redirect('/movies')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -76,6 +86,20 @@ class MovieController extends Controller
                 'tahun' => 'required|integer',
                 'rating' => 'required|numeric',
             ]);
+
+            if ($request->hasFile('poster')) {
+                //Delete old image
+                Storage::disk('public')->delete('assets/img/'. $movie->poster);
+
+                
+                // set image name
+                $extension= $request->file('poster')->getClientOriginalExtension();
+                $imageName = time() .'.' .$extension;
+
+                 // Store to Storage
+                $request->file('poster')->storeAs('assets/img', $imageName, 'public');
+                $validatedData['poster'] = $imageName;
+            }
         
             $movie->update($validatedData);
         
